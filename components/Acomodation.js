@@ -4,6 +4,7 @@ import tw from "twrnc"
 import { SafeAreaView } from 'react-native'
 import { Image } from 'react-native'
 
+
 const Acomodation = () => {
   return (
     <SafeAreaView style={tw`m-3`} >
