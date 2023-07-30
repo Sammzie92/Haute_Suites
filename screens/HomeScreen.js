@@ -3,9 +3,10 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import tw from "twrnc"
 import FontAwesome from "react-native-vector-icons/FontAwesome"
+import Entypo from "react-native-vector-icons/Entypo"
 import { Dimensions } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
 import { Image } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 
 const colors = {
     primary:"#f15454",
@@ -78,42 +79,42 @@ const HomeScreen = () => {
              <Image
                 style={[{
                 resizeMode:'contain',
-                width:30,
-                height:30,                 
+                width:50,
+                height:50,                 
                 borderColor:'white',
                 borderWidth:2                   
-                }, tw`rounded-full -ml-2`]}
+                }, tw`rounded-full ml-1`]}
                 source={require("../assets/girl.png")} 
                     />
         <Image
             style={[{
                 resizeMode:'contain',
-                width:30,
-                height:30, 
+                width:50,
+                height:50, 
                 borderColor:'white',
                 borderWidth:2                    
-                }, tw`rounded-full -ml-2`]}
+                }, tw`rounded-full -ml-4`]}
                 source={require("../assets/prince.png")} 
                 />
         <Image
             style={[{
                 resizeMode:'contain',
-                width:30,
-                height:30,
+                width:50,
+                height:50,
                 borderColor:'white',
                 borderWidth:2                     
-                }, tw`rounded-full -ml-2`]}
-                source={require("../assets/girl.png")} 
+                }, tw`rounded-full -ml-4`]}
+                source={require("../assets/raul.png")} 
                 />
         <Image
             style={[{
                 resizeMode:'contain',
-                width:30,
-                height:30, 
+                width:50,
+                height:50, 
                 borderColor:'white',
                 borderWidth:2                    
-                }, tw`rounded-full -ml-2`]}
-                source={require("../assets/girl.png")} 
+                }, tw`rounded-full -ml-4`]}
+                source={require("../assets/blonde.png")} 
                 />
             </View>
         </View>
@@ -138,9 +139,32 @@ const HomeScreen = () => {
         <Text style={[{width:95},tw`mt-6 text-white font-semibold text-lg`]}>
             Daily users from the Community</Text>
         </View>  
+        <Pressable
+          style={[{
+            borderRadius:30, 
+            justifyContent:'center', 
+            position:'absolute',            
+            top:"74%",            
+            height: 40,            
+            zIndex:9999,
+            width: Dimensions.get('screen').width /3
+        },
+            tw`bg-gray-100 ml-60  flex-row`]}
+          onPress={() => console.warn('Explore btn clicked')}
+          >
+            <Text style={[{}, tw`ml-4 mt-3 text-sm font-bold`]} >Get Started </Text>
+            <Entypo 
+            name='arrow-with-circle-right'
+            size={20}
+            color={colors.primary}
+            style={tw`mt-3`}
+            />
+            
+          </Pressable>
         
  
     </View>   
+    
 
  </SafeAreaView>
  
