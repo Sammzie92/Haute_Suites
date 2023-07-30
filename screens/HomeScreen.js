@@ -7,6 +7,10 @@ import Entypo from "react-native-vector-icons/Entypo"
 import { Dimensions } from 'react-native'
 import { Image } from 'react-native'
 import { TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+
+
+
 
 const colors = {
     primary:"#f15454",
@@ -15,6 +19,7 @@ const colors = {
 }
 
 const HomeScreen = () => {
+    
   return (
     
  <SafeAreaView style={{backgroundColor:colors.bgColor}} >
@@ -127,7 +132,7 @@ const HomeScreen = () => {
             alignItems:'center',
             width:'40%',
             zIndex:9999,            
-            top: -280,
+            top: -310,
             left:210,
             height: '23%'            
             }, tw`ml-3`]} >
@@ -136,10 +141,10 @@ const HomeScreen = () => {
         <Text style={
             [{},tw`text-white text-3xl mt-6 font-bold`]} 
             >1.2K+</Text>
-        <Text style={[{width:95},tw`mt-6 text-white font-semibold text-lg`]}>
+        <Text style={[{width:95},tw`mt-5 text-white font-semibold text-lg`]}>
             Daily users from the Community</Text>
         </View>  
-        <Pressable
+        <TouchableOpacity
           style={[{
             borderRadius:30, 
             justifyContent:'center', 
@@ -152,15 +157,16 @@ const HomeScreen = () => {
             tw`bg-gray-100 ml-60  flex-row`]}
           onPress={() => console.warn('Explore btn clicked')}
           >
-            <Text style={[{}, tw`ml-4 mt-3 text-sm font-bold`]} >Get Started </Text>
+            <Text style={[{}, tw`ml-2 mt-2 text-sm font-bold`]} >Lets Explore</Text>
             <Entypo 
             name='arrow-with-circle-right'
             size={20}
             color={colors.primary}
-            style={tw`mt-3`}
+            style={tw`mt-2 ml-2`}
             />
             
-          </Pressable>
+            
+          </TouchableOpacity>
         
  
     </View>   
