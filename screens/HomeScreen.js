@@ -7,7 +7,7 @@ import Entypo from "react-native-vector-icons/Entypo"
 import { Dimensions } from 'react-native'
 import { Image } from 'react-native'
 import { TouchableOpacity } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+
 
 
 
